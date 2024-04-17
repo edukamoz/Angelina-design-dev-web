@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+    <title>Aprendendo JavaScript</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Calculadora</h1>
+
+    <label>Número 1: </label>
+    <input type="text" id="num1">
+    <label>Número 2: </label>
+    <input type="text" id="num2">
+    <br> <br>
+    <img onclick="multiplicar_por_2()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAqhJREFUSEvFlluIjVEUx3/DEMYtKcaUSy4RHoVXmZhxyzwgSt6Uh6GkyJvcQooneZFSmomZcZ+SN0UuL14oueUWUowot2H/a+/pm21/+9vnOHX20+l8a6/fWmuvWw1VOjVV4lIqeCCwAJgM1Fuj3wDPgDvA71RHUsHTgV3AamB0jvKPQCdwAHhaZEAReBhwENgCyNuU8wM4DOwB9Dt4YuBJwBVgdgotIHMXWG6Mfh+6nweeBdwExpQJdddeAwuBl76eEHgccB9o+E+ou/7QRG4e8DWrLwRuA9ZUCOrUHAO2xcBzgQcR6KdIVse+fQemAG+dbt/j06YUNuaArwLrAEWkyZNx3zpMbizOub8f2B0CDwY+ACMDF3uACfadJHcZaLRy3cBKo/QnMBxQQxkR0PEEmBYCLwJuRMKs0mqxtTkEuGg7lYMOArpMB2uO6JgBPNb3bKg3AacKkioLHwr8sp4KKkOWFtxfYaPVD7wDOJSQzQrtqkxXElQGudDHVCizleH9wNvNGx1JAF8HlllPJa43v5DgrWTFOOqDlbFnC8BKKr2zEknv/McMD5WK4BoQsfeV6rVAuw/WuLsVAV+zIRZU4b1kwS7sKZ6rg93zwUo0NfSxAfgXYDzwLQNdkiknB1cZqZxUVv55Z2e4ovTPInDCdJfNkQaiUKmB+CFVA1kPnIs0kOPA1lAd6z/V2aOAQU4+1hY/A6NyjO4FpgLP88D6/4wp8g0J2V2KyEk/kqHppDfWENdeVYmjCM4H1Hb7Tt4ioB3rdgUWASWaoK98D2KrjzxWycwp020tE2qRfaMwxWMnUwfsBVrN8jYg0QAteFoQ95W77GU5M4Gddr0NjU3Jar09b7qY5u6LIiOL1lv/fq1d3iZ6C71mrRJSZZN0SgUnKU0Rqhr4L/HifR/QUREoAAAAAElFTkSuQmCC" />
+    <img onclick="somar()" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAiNJREFUSEvF1kvoTVEUx/HPHxmQRyihPAoRAxNhRJkyMKKUjCQDKSkyk1dIZGQkpUjJADMDSpFHmSF55ZnHgDJRHnfVOf+O0zl3n3v+/9t/j+7trLW/e61+e6/fgBFaAyPE1St4NFZiLmZkh/6AV7iP300LaQpegH3YgMk1m3/DVRzBy9QBUuBxOIodiGqbrF84jgOI35WrG3gObmBJE1pFzAOs6xz6c1V+HXgx7mBKS2ie9h6r8La8TxV4Oh5h1hChefqTTueW42dxvyrwJWxMQL/jcRazDJMS8aexqxt4UQcaJ0yt21iTBd3C6kRCiCyu4Mc8rlzx+c5V2JKioldwbHkY+6vAY/EVE/oEfo15VeC1uNkAGiFtKo68hXgeP4qt3opzFeCikPLPIaxcLKcQAiuuOsGtx/UyeA+OVYCL1TVsiDrBxWFD4f9VvBsn+gwOxskyeBMu9rnV8T5cLoNj3N1t2Mu24ooX7GEZHEL7gqkN4G3AnzATf8vg+H8W2/oEPoOddS/XfDzrzNJRCXivFYczicdjcEpVDYkLnUu+OQHudUhEJ7cX96wCT0MM8XjUh2M9xQr8SIHje3ise8NgBMIIBvRduYJu1icqvoalLcsOMxFP5OAobFJxHjMeBzM1pgSX58TsDYN4qK3ZKx4wDMLezN5OrOlA2Nsr2dx9k+pSyt6W88dk5m12ydC/yAT5JwWsu8dN84Yc12vFQwbmG/wDmONpH9S+OtIAAAAASUVORK5CYII=" />
+    <button onclick="dividir_por_2()">Dividir</button>
+
+</body>
+
+</html>

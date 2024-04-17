@@ -1,0 +1,25 @@
+body {
+    background: rgba(0, 0, 0, 0.751);
+    color: white
+}
+
+h1, h2, h3 {
+    color: cyan;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#titulo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 10px solid red;
+    background-color: black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+}

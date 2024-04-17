@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Lâmpada</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+
+        body {
+            background: black;
+        }
+
+        h1, #botoes {
+            text-align: center;
+        }
+
+        h1 {
+            color: White;
+        }
+
+        img {
+            display: flex;
+            margin: 0 auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Projeto Lâmpada</h1>
+    
+    <figure>
+        <img src="img/luzDesligada.gif" id="lampada" alt="lâmpada"> <br>
+    </figure>
+
+    <div id="botoes">
+        <button class="btn btn-outline-primary" onclick="ligar()">Ligar</button>
+        <button class="btn btn-outline-primary" onclick="desligar()">Desligar</button>
+        <button class="btn btn-outline-primary" onclick="aparecer()">Aparecer</button>
+        <button class="btn btn-outline-primary" onclick="sumir()">Sumir</button>
+        <button class="btn btn-outline-primary" onclick="alternar()">Alternar</button>
+        <button class="btn btn-outline-primary" onclick="piscar()">Piscar</button>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+div {
+    display: block;
+    padding: 5px 0;
+}
+
+textarea {
+    margin-left: 5px;
+}
+
+.msg {
+    display: flex;
+}

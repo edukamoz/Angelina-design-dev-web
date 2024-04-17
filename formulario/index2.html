@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Atividade Formulário</title>
+</head>
+<body>
+
+    <form>
+
+        <fieldset>
+            <legend>Atividade sobre formulários</legend>
+
+            <div>
+                <label for="nome">Seu Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required>
+            </div>
+
+            <div>
+                <label for="telefone">Seu Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="Digite seu Telefone">
+            </div>
+
+            <div>
+                <label for="email">Seu E-Mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-Mail*" required>
+            </div>
+
+            <div>
+                <label for="novidades">Deseja receber nossas novidades?</label>
+                <input type="radio" name="novidades" id="sim" required> Sim
+                <input type="radio" name="novidades" id="nao" required> Não
+            </div>
+
+            <div class="msg">
+                <label for="msg">Sua mensagem:</label>
+                <textarea name="msg" id="msg" placeholder="Mensagem*" required></textarea>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </fieldset>
+        
+    </form>
+    
+</body>
+</html>

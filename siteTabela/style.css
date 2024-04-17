@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    box-sizing: content-box;
+}
+
+table {
+    background: url(img/Vava.jpg) no-repeat top left fixed;
+}
+
+.alinhar-ao-centro {
+    text-align: center;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.meio {
+    display: flex;
+    align-items: center;
+}
+
+th, td {
+    width: 400px;
+    height: 40px;
+    border: solid 2px rgb(22, 203, 46);
+}
+
+table {
+    border: inset 10px rgb(22, 203, 46);
+    border-collapse: collapse;
+}
+
+img {
+    width: 25px;
+    padding: 5px;
+}
+
+th[scope='col'] {
+    background-color: rgb(173, 255, 135);
+    padding: 20px;
+}
+
+th[scope='row'] {
+    background-color: rgb(216, 255, 205);
+}
+
+tr:nth-of-type(even) {
+    background-color: rgb(208, 255, 133);
+}

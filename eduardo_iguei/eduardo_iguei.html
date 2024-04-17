@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividades do dia 09/04</title>
+</head>
+<body>
+
+    <h1>Atividade 1</h1>
+    <div>
+
+        <h4>Cálculo para novo salário</h4>
+        <label for="salario">Salário:</label> <br>
+        <input type="text" id="salario" placeholder="0000">
+        <br> <br>
+
+        <label for="percentual">Percentual de aumento:</label> <br>
+        <input type="text" id="percentual" placeholder="000">
+        <br> <br>
+
+        <button onclick="calcular_salario()">Calcular</button>
+        <h4>Novo salário:</h4>
+        <p id="novo_salario"></p>
+
+    </div>
+
+    <h1>Atividade 2</h1>
+    <div>
+
+        <h4>Cálculo para área de um triângulo</h4>
+        <label for="base">Base:</label> <br>
+        <input type="text" id="base" placeholder="valor em centímetros">
+        <br> <br>
+
+        <label for="altura">Altura:</label> <br>
+        <input type="text" id="altura" placeholder="valor em centímetros">
+        <br> <br>
+
+        <button onclick="calcular_area()">Calcular</button>
+        <h4>Área do triângulo:</h4>
+        <p id="area"></p>
+
+    </div>
+
+    <h1>Atividade 3</h1>
+    <div>
+
+        <h4>Cálculo com base na data de nascimento</h4>
+        <label for="data_de_nascimento">Ano de nascimento:</label> <br>
+        <input type="text" id="data_de_nascimento" placeholder="0000">
+        <br> <br>
+        <button onclick="calcular_idade()">Calcular</button>
+
+    </div>
+
+    <script>
+
+        const date = new Date()
+
+        function calcular_salario() {
+            salario = Number(document.getElementById('salario').value)
+            percentual = Number(document.getElementById('percentual').value)
+            novo_salario = salario + (salario * (percentual/100))
+            document.getElementById('novo_salario').innerText = "R$ " + novo_salario
+        }
+
+        function calcular_area() {
+            base = Number(document.getElementById('base').value)
+            altura = Number(document.getElementById('altura').value)
+            area = (base * altura) / 2
+            document.getElementById('area').innerText = area + ' cm'
+        }
+
+        function calcular_idade() {
+            data_de_nascimento = document.getElementById('data_de_nascimento').value
+            idade_2050 = 2050 - data_de_nascimento
+            console.log(`Idade aproximada: ${2024 - data_de_nascimento} anos, 4 meses e 9 dias`)
+            alert(`Você terá ${idade_2050} anos em 2050`)
+        }
+
+    </script>
+    
+</body>
+</html>

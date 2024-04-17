@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Forms</title>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <p id="paragrafo">Um belo de um teste</p>
+            <legend>Cadastro</legend>
+
+            <label for="nome" id="labelNome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite a senha">
+
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade" min="0" max="120" value="4" placeholder="Idade" step="5">
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
+
+            <label for="teste">Teste</label>
+            <select name="uf" id="estado">
+                <optgroup label="Sudeste">
+                    <option value="sp">SP</option>
+                    <option value="rj">RJ</option>
+                    <option value="es">ES</option>
+                    <option value="mg">MG</option>
+                </optgroup>
+
+                <optgroup label="Sul">
+                    <option value="rs">RS</option>
+                    <option value="sc">SC</option>
+                    <option value="pr">PR</option>
+                </optgroup>   
+                
+                <optgroup label="Centro-Oeste">
+                    <option value="ms">MS</option>
+                    <option value="mt">MT</option>
+                    <option value="to">TO</option>
+                </optgroup>
+
+                <optgroup label="Norte">
+                    <option value="am">AM</option>
+                    <option value="ac">AC</option>
+                    <option value="ro">RO</option>
+                    <option value="rr">RR</option>
+                </optgroup>
+
+                <optgroup label="Nordeste">
+                    <option value="ba">BA</option>
+                    <option value="ce">CE</option>
+                </optgroup>
+                
+            </select>
+
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email">
+
+            <label for="cor">Cor preferida:</label>
+            <input type="color" name="cor" id="cor">
+
+            <label for="range">Range:</label>
+            <input type="range" name="range" id="range" min="0" max="100">
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="(99)99999-9999" pattern="\D{5}-\D{3}">
+
+            <label for="site">Site:</label>
+            <input type="url" name="url" id="url">
+
+            <label for="botao">Botão</label>
+            <input type="submit" value="CADASTRAR">
+            <input type="reset" value="RESETAR">
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>
