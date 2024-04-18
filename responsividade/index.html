@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Responsividade</title>
 </head>
-<body>
-    
+
+<body style="background-color: black; color:white;">
+
+    <div class="container-fluid">   
+
+        <h1>Site responsivo</h1>
+
+        <div class="row">
+
+            <div class="col">
+
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-control" type="email" name="email" id="email">
+
+            </div>
+
+            <div class="col-lg">
+
+                <label class="form-label" for="senha">Senha:</label>
+                <input class="form-control" type="password" name="senha" id="senha">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+                <label class="form-label" for="endereco">Endereço:</label>
+                <input class="form-control" type="text" name="endereco" id="endereco">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <label class="form-label" for="cidade">Cidade:</label>
+                <input class="form-control" type="text" name="cidade" id="cidade">
+
+            </div>
+
+            <div class="col-sm">
+
+                <label class="form-label" for="estado">Estado:</label>
+                <select class="form-select" name="estado" id="estado">
+                    <option selected>Selecionar...</option>
+                    <option>São Paulo</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Minas Gerais</option>
+                    <option>Espírito Santo</option>
+                </select>
+
+            </div>
+
+            <div class="col-sm-2">
+
+                <label class="form-label" for="cep">CEP:</label>
+                <input class="form-control" type="text" name="cep" id="cep">
+
+            </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 15px;">
+
+            <div class="col">
+                <input class="form-check-input" type="checkbox">
+                <label class="form-check-label" for="verificar">Verificar</label>
+            </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 15px;">
+
+            <div class="col">
+                <button class="btn btn-primary">Logar</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
 </body>
+
 </html>
