@@ -12,7 +12,7 @@
     <div class="container-fluid mt-3">
 
         <div class="alert alert-primary">
-            <strong>Hamburgueria XGostoso</strong>
+            <strong>Hamburgueria XGostoso <span id="relogio"></span> </strong>
         </div>
 
         <div class="row"> 
@@ -36,30 +36,33 @@
 
         </div>
 
-        <div class="row">
+        <div class="row" onchange="totalPagar()">
 
             <div class="col">
                 <label for="combos" class="form-label">Combos</label>
                 <select class="form-select" name="combos" id="combos">
                     <option value="20">XBurger - R$20,00</option>
                     <option value="50">Monstro Burger - R$50,00</option>
+                    <option value="36">Lanchão da braba - R$36,00</option>
+                    <option value="70">Duvido comer tudo - R$70,00</option>
+                    <option value="35">Tuts tuts lanche - R$35,00</option>
                 </select>
             </div>
 
             <div class="col-sm-3">
                 <h6>Adicionais</h6>
                 <div class="form-check">
-                    <input class="form-check-input" name="adicionais" id="bacon" type="checkbox">
+                    <input class="form-check-input" name="adicionais" id="bacon" type="checkbox" value="10">
                     <label class="form-check-label" for="bacon">Bacon</label> <br>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" name="adicionais" id="cheddar" type="checkbox">
+                    <input class="form-check-input" name="adicionais" id="cheddar" type="checkbox" value="10">
                     <label class="form-check-label" for="cheddar">Cheddar</label> <br>
                 </div>
 
                 <div class="form-check">
-                    <input class="form-check-input" name="adicionais" id="picles" type="checkbox">
+                    <input class="form-check-input" name="adicionais" id="picles" type="checkbox" value="10">
                     <label class="form-check-label" for="picles">Picles</label>
                 </div>
             </div>
@@ -68,13 +71,13 @@
                 <h6>Entrega</h6>
 
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="entrega" id="viagem">
+                    <input class="form-check-input" type="radio" name="entrega" id="viagem" value="10">
                     <label class="form-check-label" for="viagem">
                         Para viagem
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="entrega" id="balcao">
+                    <input class="form-check-input" type="radio" name="entrega" id="balcao" value="0" checked>
                     <label class="form-check-label" for="balcao">
                         Balcão
                     </label>
@@ -93,7 +96,7 @@
                 <button class="btn btn-success">Novo pedido</button>
             </div>
             <div class="col-sm">
-                <button class="btn btn-info">Recibo</button>
+                <button class="btn btn-info" onclick="imprimir()">Recibo</button>
             </div>
 
         </div>
@@ -105,7 +108,7 @@
                     <i class="ri-money-dollar-circle-line"></i>
                     Total a pagar:
                 </p>
-                <input type="text" readonly disabled class="form-control">
+                <input type="text" readonly disabled class="form-control" id="total_pagar">
             </div>
 
         </div>
@@ -118,8 +121,8 @@
                     Descrição do pedido:
                 </p>
                 <div class="form-floating">
-                    <textarea disabled class="form-control" id="descricao_pedido" style="height: 100;"></textarea>
-                    <label for="descricao_pedido">Descrição do pedido</label>
+                    <textarea disabled class="form-control" style="height: 100;"></textarea>
+                    <label for="descricao_pedido" id="descricao_pedido">Descrição do pedido</label>
                 </div>
             </div>
 
