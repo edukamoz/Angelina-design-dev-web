@@ -1,111 +1,37 @@
-@import url('https://fonts.cdnfonts.com/css/basileus');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+    border: 1px solid red;
 }
 
-body, html, main {
-    height: 100%;
-}
-
-ul {
-    list-style: none;
-}
-
-nav {
-    background-color: rgb(10, 11, 65);
-    justify-content: space-between;
+header {
     display: flex;
+    height: 100px;
+    background-color: #010626;
     align-items: center;
-}
-
-a {
-    text-decoration: none;
+    justify-content: space-between
 }
 
 #logo {
-    background: url(img/logo.png) no-repeat center left;
-    background-size: contain;
-    width: 10vh;
-    line-height: 10vh;
-}
-
-#logo h1 {
-    font-family: "Basileus";
-    text-indent: 10vh;
-    font-size: 42px;
-    color: rgb(0, 157, 255);
-}
-
-#barra-navegacao ul, #barra-navegacao ul li {
     display: flex;
-    justify-content: space-between;
-}
-
-#barra-navegacao {
-    line-height: 24px;
-    height: 24px;
-    width: 80vh;
-}
-
-li a {
-    padding: 5px 10px;
-    font-family: Basileus;
-    font-size: 24px;
-    color: white;
-    border-radius: 5px;
-}
-
-li a:hover {
-    background-color: white;
-    color: black;
-}
-
-#login-logout a {
-    font-size: 24px;
-    margin-right: 15px;
-}
-
-#entrar {
-    color: white;
-}
-
-#cadastrar {
-    color: black;
-    background-color: cyan;
-    padding: 7px;
-    border-radius: 2px;
-}
-
-main {
-    background: linear-gradient(to bottom, rgb(10, 11, 65), black);
-    justify-content: space-between;
     align-items: center;
+}
+
+#links {
     display: flex;
+    list-style-type: none;
 }
 
-#propaganda {
-    float: left;
-    margin-left: 25px;
+#links>li {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
 }
 
-#propaganda h1 {
-    size: 60px;
-    color: white;
-}
-
-#img-propaganda {
-    float: right;
-    margin-right: 80px;
-}
-
-img {
-    width: 600px;
-}
-
-h1#azul {
-    color: cyan;
-    font-size: 60px;
+h1 {
+    font-family: "Graduate", serif;
 }

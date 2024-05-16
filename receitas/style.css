@@ -1,0 +1,12 @@
+.avaliacao {
+    display: flex;
+}
+
+.star-icon {
+    color: yellow;
+    border: 1px solid white;
+}
+
+.star-icon::before {
+    content: "\2605";
+}
