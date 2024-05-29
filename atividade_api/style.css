@@ -43,7 +43,8 @@ label~button {
     border: 1px solid gray;
 }
 
-div.alinhar>button {
+div.centralizar>button {
+    min-width: 150px;
     padding: 10px 20px;
     border: none;
     background-color: rgb(8, 61, 84);
@@ -52,6 +53,7 @@ div.alinhar>button {
 }
 
 input {
+    min-width: 100px;
     width: 100%;
     display: block;
     height: 30px;
@@ -64,14 +66,21 @@ input {
     width: 100%;
 }
 
-.alinhar {
+.centralizar {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 10%;
-    flex: wrap;
+    flex-wrap: wrap;
+}
+
+.alinhar {
+    align-items: center;
+    gap: 10px;
 }
 
 .row {
+    margin: 10px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -82,4 +91,14 @@ input {
     margin: 0 10px;
     display: flex;
     flex-direction: column;
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .column {
+        align-items: center;
+    }
 }

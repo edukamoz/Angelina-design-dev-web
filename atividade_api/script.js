@@ -1,21 +1,30 @@
-// let bandeira = 
-// let imagem = `https://source.unsplash.com/1600x900/?${cidade}`
 let buscar = document.getElementById('buscar')
 
 buscar.addEventListener('click', verificarLogradouro)
 
 async function verificarLogradouro() {
+
+    // Aparecer Logradouro
+
     let cep = document.getElementById('cep').value
-    cep = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
-    cep = await cep.json()
-    document.getElementById('logradouro').value = `${cep.logradouro}, ${cep.bairro} - ${cep.localidade} - ${cep.uf}`
+    localizacao = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    localizacao = await localizacao.json()
 
-    // Colocar imagem
+    // Verificar se CEP é válido
+    if (localizacao.erro == true) {
+        alert('Digite um CEP Válido')
+        return
+    }
 
-    // unsplash = `https://source.unsplash.com/1600x900/?${cep.localidade}`
+    document.getElementById('logradouro').value = `${localizacao.logradouro}, ${localizacao.bairro} - ${localizacao.localidade} - ${localizacao.uf}`
+    document.getElementById('cidade').value = localizacao.localidade
+
+    // Colocar imagem (Não está funcionando o API do Unsplash)
+
+    // unsplash = `https://source.unsplash.com/800x600/?${cep.localidade}`
     // let img = document.querySelector("img[alt='cidade']")
     // img.setAttribute('src', unsplash)
-    // img.setAttribute('hidden', 'False')
+    // img.hidden = false
 
     // Colocar bandeira
 
@@ -23,6 +32,8 @@ async function verificarLogradouro() {
     let icon_bandeira = document.querySelector("img[alt='bandeira']")
     icon_bandeira.setAttribute('src', bandeira)
     icon_bandeira.hidden = false
+
+    document.getElementById('demo_cidade').innerHTML = localizacao.localidade
 }
 
 async function verificarClima() {
@@ -32,17 +43,22 @@ async function verificarClima() {
     document.getElementById('temperatura').innerHTML = `${clima.main.temp}ºC`
     document.getElementById('humidade').innerHTML = `${clima.main.humidity}%`
     document.getElementById('vento').innerHTML = `${clima.wind.speed}km/h`
-    document.getElementById('tempo').innerHTML = `${clima.weather[0].main}`
+    document.getElementById('tempo').innerHTML = clima.weather[0].main
 
     // Colocar bandeira
 
     bandeira = `https://flagsapi.com/${clima.sys.country}/flat/64.png`
+    let icon_bandeira = document.querySelector("img[alt='bandeira']")
+    icon_bandeira.setAttribute('src', bandeira)
+    icon_bandeira.hidden = false
+    document.getElementById('demo_cidade').innerHTML = cidade
 
 }
 
 function limparDados() {
     let elementos = document.getElementsByTagName('input')
     let elementos2 = document.getElementsByTagName('span')
+    document.querySelector("img[alt='bandeira']").hidden = true
 
     for (let x in elementos) {
         elementos[x].value = ''

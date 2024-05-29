@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Verificar clima</title>
 </head>
+
 <body>
 
     <header>
@@ -18,7 +20,7 @@
             <summary>
                 O que é um APP?
             </summary>
-        </details>  
+        </details>
 
         <section>
 
@@ -27,29 +29,31 @@
                     <label for="cidade">Cidade</label>
                     <input type="text" id="cidade" name="cidade">
                 </div>
-                
+
                 <div class="column">
                     <label for="cep">CEP</label>
                     <input type="text" id="cep" name="cep">
                 </div>
-                
+
                 <div class="column">
                     <label for="verificar_logra">Verificar Logradouro</label>
                     <button id="buscar"><img src="img/lupa.svg" alt="lupa" id="lupa"></button>
                 </div>
             </div>
-            
+
         </section>
 
-        <div class="alinhar">
+        <div class="centralizar">
             <button onclick="verificarClima()">Verificar Clima</button>
             <button onclick="limparDados()">Limpar Dados</button>
         </div>
 
-        <div>
+        <div class="row">
 
-            <label for="rua">Rua</label>
-            <input id="logradouro" type="text" readonly disabled>
+            <div class="column">
+                <label for="rua">Rua</label>
+                <input id="logradouro" type="text" readonly disabled>
+            </div>
 
         </div>
 
@@ -67,18 +71,24 @@
             <strong>Tempo: </strong>
             <span id="tempo"></span>
 
-            <span id="demo_cidade"></span>
-            <img src="" alt="bandeira" hidden>
+            <div class="row alinhar">
 
-            <figure>
+                <span id="demo_cidade"></span>
+                <img src="" alt="bandeira" hidden>
+
+            </div>
+
+            <!-- Imagem da cidade pelo Unsplash -->
+            <!-- <figure>
                 <img src="" alt="cidade" hidden>
-            </figure>
+            </figure> -->
 
         </div>
 
     </main>
 
     <script src="script.js"></script>
-    
+
 </body>
+
 </html>
