@@ -43,7 +43,7 @@ async function verificarClima() {
     document.getElementById('temperatura').innerHTML = `${clima.main.temp}ºC`
     document.getElementById('humidade').innerHTML = `${clima.main.humidity}%`
     document.getElementById('vento').innerHTML = `${clima.wind.speed}km/h`
-    document.getElementById('tempo').innerHTML = clima.weather[0].main
+    document.getElementById('tempo').innerHTML = clima.weather[0].description
 
     // Colocar bandeira
 
